@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant De Eterij</title>
+    <title>Eterij De Drie Gekroonde Laarsjes</title>
     <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f9f6f0; color: #333; line-height: 1.6; }
         
-        /* HEADER MET HET JUISTE AFBEELDINGSPAD */
+        /* HEADER MET LICHTE ACHTERGROND EN ZONDER OVERLAY */
         header { 
-            background-color: #2c3e50; 
-            background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('assets/img/bootstrap.jpg'); 
+            background-color: #ffffff; /* Witte fallback omdat de afbeelding licht is */
+            background-image: url('assets/img/bootstrap.jpg'); 
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat;
-            color: white; 
             padding: 60px 20px; 
+            border-bottom: 3px solid #800020; /* Subtiele bordeauxrode lijn onder de header */
         }
         
-        h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        /* TITEL IN BORDEAUX ROOD */
+        h1 { 
+            margin: 0; 
+            font-size: 2.5em; 
+            letter-spacing: 1px; 
+            color: #800020; /* Bordeauxrood */
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8); /* Lichte schaduw zodat het nóg beter leesbaar is op de achtergrond */
+        }
+        
+        /* ONDERTITEL TEXT KLEUR PRETTIG LEESBAAR MAKEN OP LICHTE ACHTERGROND */
+        header p { 
+            font-size: 1.2em; 
+            color: #444; 
+            margin: 10px 0 0 0;
+            font-weight: 500;
+        }
+        
         h2 { color: #2c3e50; margin-top: 10px; font-size: 1.8em; }
-        p { font-size: 1.1em; color: #555; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
         
         /* STYLING VOOR DE BUTTONS */
@@ -32,13 +47,17 @@
         /* VERBORGEN SECTIES (WORDEN ZICHTBAAR NA KLIK) */
         .sectie { display: none; background: white; padding: 30px; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; }
         .iframe-container { position: relative; overflow: hidden; width: 100%; border-radius: 6px; }
+        
+        /* EVENTUELE ALGEMENE PARAGRAFEN BINNEN DE PAGINA */
+        .container p { font-size: 1.1em; color: #555; }
+        
         footer { background-color: #2c3e50; color: white; padding: 20px; margin-top: 60px; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Restaurant De Eterij</h1>
+        <h1>Eterij De Drie Gekroonde Laarsjes</h1>
         <p>Ambachtelijk genieten in een ongedwongen sfeer</p>
     </header>
 
@@ -79,7 +98,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Restaurant De Eterij. Alle rechten voorbehouden.</p>
+        <p>&copy; 2026 Eterij De Drie Gekroonde Laarsjes. Alle rechten voorbehouden.</p>
     </footer>
 
     <script>
