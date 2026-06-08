@@ -6,8 +6,19 @@
     <title>Restaurant De Eterij</title>
     <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f9f6f0; color: #333; line-height: 1.6; }
-        header { background-color: #2c3e50; color: white; padding: 40px 20px; }
-        h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
+        
+        /* HEADER MET HET JUISTE AFBEELDINGSPAD */
+        header { 
+            background-color: #2c3e50; 
+            background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('assets/img/bootstrap.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            color: white; 
+            padding: 60px 20px; 
+        }
+        
+        h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
         h2 { color: #2c3e50; margin-top: 10px; font-size: 1.8em; }
         p { font-size: 1.1em; color: #555; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
@@ -73,16 +84,12 @@
 
     <script>
         function toonSectie(sectieId) {
-            // Eerst verbergen we alle secties
             var secties = document.getElementsByClassName('sectie');
             for (var i = 0; i < secties.length; i++) {
                 secties[i].style.display = 'none';
             }
             
-            // Daarna tonen we alleen de sectie waar op geklikt is
             document.getElementById(sectieId).style.display = 'block';
-            
-            // Scroll automatisch een klein stukje naar beneden zodat de inhoud goed in beeld komt
             document.getElementById(sectieId).scrollIntoView({ behavior: 'smooth' });
         }
     </script>
